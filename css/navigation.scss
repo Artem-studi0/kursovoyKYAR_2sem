@@ -1,0 +1,118 @@
+.navigation{
+  margin-bottom: 30px;
+  font-family: 'Nunito', sans-serif;
+  @media(min-width:480px){
+      --container:80%;
+  }
+  @media(min-width:768px){
+      --container:1024px;
+      padding: 0 10px;
+  }
+  @media(min-width:1024px){
+      --container:960px;
+      margin-bottom: 50px;
+  }
+  @media(min-width:1360px){
+      --container:1290px;
+  }
+  &_container{
+     padding: 10;
+     min-width: 100vw;
+  }
+  &_list{
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 10px calc((100vw/2) - (var(--container) / 2));
+      column-gap: 12px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      @media(min-width: 768px){
+          column-gap: 12px;
+      }
+      @media(min-width:1024px){
+          column-gap: 24px;
+      }
+  }
+  &_button{
+      background-color: #fff;
+      border-radius: 50px;
+      padding: 8px 10px 8px 35px;
+      font-size: 14px;
+      line-height: 18px;
+      white-space: nowrap;
+      background-repeat: no-repeat;
+      background-size: 28px;
+      background-position: 8px center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      transform-origin: center;
+      position: relative;
+      z-index: 1;
+      font-family: 'Nunito',sans-serif;
+      @media(min-width:1024px){
+          padding: 10px 16px 10px 50px;
+          font-size: 18px;
+          line-height: 24px;
+          background-size: 28px;
+          background-position: 16px center;
+      }
+      &:hover,
+      &:focus-visible{
+          background-color: pink;
+          transform:scale(1.05);
+          z-index:2;
+      }
+      &:active{
+          background-color: pink;
+          transform: scale(1.05);
+          z-index: 2;
+      }
+      &_active{
+          background-color:#ff6b6b;
+          color: white;
+          transform: scale(1.05);
+          z-index: 2;
+      }
+      &_catalog{
+          background-image: url(../img/istockphoto-1302392412-612x612-removebg-preview.png);
+          &:focus{
+              outline: none;
+          }
+          &:hover{
+              background-color: pink;
+              transform: scale(1.05);
+          }
+      }
+      &_snack{
+          background-image: url(../img/blocknot-removebg-preview.png);
+      }
+      &_hot-dog{
+          background-image: url(../img/blocknot-removebg-preview.png);
+      }
+      &_aboutus{
+          background-image: url(../img/pitsia-removebg-preview.png);
+      }
+      &_comments{
+          background-image: url(../img/png-transparent-contract-computer-icons-desktop-revocation-of-license-miscellaneous-angle-text-thumbnail-removebg-preview.png);
+      }
+      &_superdeal{
+          background-image: url(../img/black-sale-label-1425211005Yid-removebg-preview.png);
+      }
+      &_buy{
+          background-image: url(../img/istockphoto-1206806317-612x612-removebg-preview.png);
+      }
+      &_contacts{
+          background-image: url(../img/gratis-png-iconos-de-computadora-lista-de-contactos-email-iphone-telefono-bhagat-singh-removebg-preview.png);
+      }
+      &_enter{
+          background-image: url(../img/pngtree-vector-list-icon-png-image_322087-removebg-preview1.png);
+      }
+  }
+}
+@supports not selector(::focus-visible){
+  .navigation_button:focus{
+      background-color: pink;
+      transform: scale(1.1);
+  }
+}

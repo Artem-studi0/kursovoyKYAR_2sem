@@ -1,0 +1,117 @@
+.footer {
+  padding: 24px 0;
+  background-color: #ffffff;
+  font-family: "Nunito", sans-serif;
+}
+@media (min-width: 1360px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 30px;
+  }
+}
+.footer__logo {
+  width: 196px;
+  color: #ff7020;
+  margin-bottom: 12px;
+}
+@media (min-width: 480px) {
+  .footer__logo {
+    margin-bottom: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__logo {
+    width: 300px;
+    margin-bottom: 0;
+    grid-area: logo;
+  }
+}
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  font-style: normal;
+}
+@media (min-width: 480px) {
+  .footer__address {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__address {
+    margin-bottom: 40px;
+    gap: 50px;
+    justify-content: flex-end;
+  }
+}
+.footer__contact {
+  flex-grow: unset;
+}
+@media (min-width: 480px) {
+  .footer__contact {
+    flex-grow: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__contact {
+    flex-grow: unset;
+  }
+}
+@media (min-width: 1360px) {
+  .footer__contact {
+    flex-grow: 1;
+  }
+}
+.footer__title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  margin-bottom: 10px;
+  font-family: "Nunito", sans-serif;
+}
+@media (min-width: 1024px) {
+  .footer__title {
+    margin-bottom: 24px;
+  }
+  .footer__title_sn {
+    margin-bottom: 22px;
+  }
+}
+.footer__link-phone {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  font-family: "Nunito", sans-serif;
+}
+@media (min-width: 1024px) {
+  .footer__link-phone {
+    font-size: 16px;
+  }
+}
+.footer__list {
+  display: flex;
+  gap: 16px;
+}
+.footer__list-sn {
+  color: #ff7020;
+}
+.footer__development {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Nunito", sans-serif;
+}
+@media (min-width: 1024px) {
+  .footer__content {
+    display: grid;
+    grid-template-areas: "logo address" "development .";
+  }
+}/*# sourceMappingURL=footer.css.map */

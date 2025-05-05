@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+    <product id="1">
+        <name>101 красная роза</name>
+        <price>
+            <regular>500</regular>
+            <sale>400</sale>
+            <currency>bun</currency>
+        </price>
+        <image>img/rosesrosesroses.png</image>
+    </product>
+    <product id="2">
+        <name>101 белая роза</name>
+        <price>
+            <regular>500</regular>
+            <sale>400</sale>
+            <currency>bun</currency>
+        </price>
+        <image>img/rosesroseswhite.png</image>
+    </product>
+    <product id="3">
+        <name>101 смешаная роза</name>
+        <price>
+            <regular>600</regular>
+            <sale>500</sale>
+            <currency>bun</currency>
+        </price>
+        <image>img/rosesrosescmmehanoe.png</image>
+    </product>
+    <product id="4">
+        <name>Букет "Нежный"</name>
+        <price>
+            <regular>250</regular>
+            <sale>200</sale>
+            <currency>bun</currency>
+        </price>
+        <image>img/negno.png</image>
+    </product>
+    <product id="5">
+        <name>Букетик "Летний"</name>
+        <price>
+            <regular>100</regular>
+            <sale>80</sale>
+            <currency>bun</currency>
+        </price>
+        <image>img/letni.png</image>
+    </product>
+    
+    <product id="6">
+        <name>Букет "Прекрасный"</name>
+        <price>
+            <regular>500</regular>
+            <sale>400</sale>
+            <currency>bun</currency>
+        </price>
+        <image>img/prekraas.png</image>
+    </product>
+    <product id="7">
+        <name>Букетик для жены</name>
+        <price>
+            <regular>40</regular>
+            <sale>30</sale>
+            <currency>bun</currency>
+        </price>
+        <image>img/komnata.png</image>
+    </product>
+    <product id="8">
+        <name>Домашнее растение</name>
+        <price>
+            <regular>20</regular>
+            <sale>15</sale>
+            <currency>bun</currency>
+        </price>
+        <image>img/krokus.png</image>
+    </product>
+</products>

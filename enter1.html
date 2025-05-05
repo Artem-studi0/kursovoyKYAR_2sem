@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/enter.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon/sage.png" sizes="96x96" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff">
+    <title>Вход - Sage</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header_container">
+        <svg class="header_logo" viewBox="0 0 199 44" role="img" aria-label="Логотип Sage">
+            <use href="img/sprite.svg#logo">
+        </svg>
+        <div class="header_title-container">
+            <h1 class="header_title">
+                <span class="header_title-text">Только самые</span>
+                <span class="header_title-text header_title-text_red">Лучшие цветы</span>
+            </h1>
+            <div class="p header_appeal">Бесплатная доставка от 20р</div>
+        </div>
+    </div>
+   
+</header>
+<section class="litle__container">
+    <div class="first"><a href="index.html">Главная</a></div>
+    <div class="second">→</div>
+    <div class="three">Вход</div>
+</section>
+
+<nav class="navigation">
+    <div class="container navigation_container">
+        <input type="checkbox" id="burger-toggle" class="burger-toggle">
+        <label for="burger-toggle" class="burger-button">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </label>
+        <div class="navigation_wrapper">
+            <ul class="navigation_list">
+                <li class="naavigation_item">
+                    <a href="index.html"><button class="navigation_button navigation_button_catalog">Каталог</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="about.html"><button class="navigation_button navigation_button_aboutus">О нас</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="comments.html"><button class="navigation_button navigation_button_comments">Отзывы</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="index.html#sales"><button class="navigation_button navigation_button_superdeal">Акции</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="cart.html"><button class="navigation_button navigation_button_buy">Корзина</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="contacts.html"><button class="navigation_button navigation_button_contacts">Контакты</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="enter.html"><button class="navigation_button navigation_button_enter navigation_button_active">Вход/Регистрация</button></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<form id="loginForm" class="form" action="" method="post">
+    <h2>Вход</h2>
+    <input class="input" type="text" placeholder="Введите почту" required>
+    <input class="input" type="password" placeholder="Пароль" required>
+    <button class="btn" type="submit">Войти</button>
+    <a href="enter.html"><h3>Нет аккаунта? Зарегистрируйтесь</h3></a>
+</form>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        const userData = JSON.parse(localStorage.getItem('userData'));
+        const email = this.querySelector('input[type="text"]').value;
+        const password = this.querySelector('input[type="password"]').value;
+        if (userData && userData.email === email && userData.password === password) {
+            alert('Вход успешен!');
+            window.location.href = "index.html"; 
+        } else {
+            alert('Неправильная почта или пароль');
+        }
+    });
+</script>
+</body>
+</html>

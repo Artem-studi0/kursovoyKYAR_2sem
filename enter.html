@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/enter.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon/sage.png" sizes="96x96" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff">
+    <title>Регистрация - Sage</title>
+</head>
+<body>
+ 
+
+<header class="header">
+    <div class="container header_container">
+        <svg class="header_logo" viewBox="0 0 199 44" role="img" aria-label="Логотип Sage">
+            <use href="img/sprite.svg#logo">
+        </svg>
+        <div class="header_title-container">
+            <h1 class="header_title">
+                <span class="header_title-text">Только самые</span>
+                <span class="header_title-text header_title-text_red">Лучшие цветы</span>
+            </h1>
+            <div class="p header_appeal">Бесплатная доставка от 20р</div>
+        </div>
+    </div>
+   
+</header>
+<section class="litle__container">
+    <div class="first"><a href="index.html">Главная</a></div>
+    <div class="second">→</div>
+    <div class="three">Регистрация</div>
+</section>
+
+<nav class="navigation">
+    <div class="container navigation_container">
+        <input type="checkbox" id="burger-toggle" class="burger-toggle">
+        <label for="burger-toggle" class="burger-button">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </label>
+        <div class="navigation_wrapper">
+            <ul class="navigation_list">
+                <li class="naavigation_item">
+                    <a href="index.html"><button class="navigation_button navigation_button_catalog">Каталог</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="about.html"><button class="navigation_button navigation_button_aboutus">О нас</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="comments.html"><button class="navigation_button navigation_button_comments">Отзывы</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="index.html#sales"><button class="navigation_button navigation_button_superdeal">Акции</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="cart.html"><button class="navigation_button navigation_button_buy">Корзина</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="contacts.html"><button class="navigation_button navigation_button_contacts">Контакты</button></a>
+                </li>
+                <li class="naavigation_item">
+                    <a href="enter.html"><button class="navigation_button navigation_button_enter navigation_button_active">Вход/Регистрация</button></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<form id="registrationForm" class="form" action="" method="post">
+    <h2>Регистрация</h2>
+    <input class="input" type="text" placeholder="Ваше имя" required>
+    <input class="input" type="email" placeholder="Ваш e-mail" required>
+    <input class="input" type="tel" placeholder="Ваш телефон" required>
+    <input class="input" type="password" placeholder="Пароль" required>
+    <input class="input" type="password" placeholder="Пароль еще раз" required>
+    <button class="btn" type="submit">Регистрация</button>
+    <a href="enter1.html"><h3>Возможно вы уже зарегистрированы?</h3></a>
+</form>
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        const password = this.querySelector('input[type="password"]').value;
+        const confirmPassword = this.querySelectorAll('input[type="password"]')[1].value;
+        
+        if (password !== confirmPassword) {
+            alert('Пароли не совпадают!');
+            return;
+        }
+        const formData = {
+            name: this.querySelector('input[type="text"]').value,
+            email: this.querySelector('input[type="email"]').value,
+            phone: this.querySelector('input[type="tel"]').value,
+            password: password
+        };
+        localStorage.setItem('userData', JSON.stringify(formData));
+        alert('Регистрация успешна!');
+        window.location.href = "index.html"; 
+    });
+</script>
+</body>
+</html>

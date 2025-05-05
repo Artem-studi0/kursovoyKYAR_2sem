@@ -1,0 +1,116 @@
+.product1 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 16px;
+  min-height: 243px;
+  border: 0;
+  margin: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 768px) {
+  .product1 {
+    padding: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .product1 {
+    padding: 25px;
+    min-height: 400px;
+  }
+}
+
+.catalog_item {
+  margin: 15px;
+}
+
+.product__image1 {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin: 0 auto 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid pink;
+}
+@media (max-width: 768px) {
+  .product__image1 {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .product__image1 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.product__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 15px;
+  color: #333;
+}
+
+.comment__star {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .comment__star {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .comment__star {
+    font-size: 14px;
+  }
+}
+.comment__star span {
+  color: #ffd700;
+  letter-spacing: 2px;
+}
+
+.litle__container {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+}
+@media (max-width: 768px) {
+  .litle__container {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
+.litle__container .first a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.litle__container .first a:hover {
+  color: #ff6b6b;
+}
+.litle__container .second {
+  margin: 0 10px;
+  color: #999;
+}
+.litle__container .three {
+  color: #ff6b6b;
+  font-weight: 600;
+}/*# sourceMappingURL=comments.css.map */

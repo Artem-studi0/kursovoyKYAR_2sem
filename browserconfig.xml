@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+<msapplication>
+<tile>
+<square150x150logo src="icon/sage.png"/>
+<TileColor>#ffc40d</TileColor>
+</tile>
+<application>
+<name>Sage - Цветочный магазин</name>
+<description>Только Лучшие ЦВЕТЫ</description>
+<version>1.0.0</version>
+</application>
+</msapplication>
+</browserconfig>
