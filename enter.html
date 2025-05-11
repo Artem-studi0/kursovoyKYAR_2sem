@@ -82,25 +82,22 @@
     <a href="enter1.html"><h3>Возможно вы уже зарегистрированы?</h3></a>
 </form>
 <script>
-    document.getElementById('registrationForm').addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        const password = this.querySelector('input[type="password"]').value;
-        const confirmPassword = this.querySelectorAll('input[type="password"]')[1].value;
-        
-        if (password !== confirmPassword) {
-            alert('Пароли не совпадают!');
-            return;
-        }
-        const formData = {
-            name: this.querySelector('input[type="text"]').value,
-            email: this.querySelector('input[type="email"]').value,
-            phone: this.querySelector('input[type="tel"]').value,
-            password: password
-        };
-        localStorage.setItem('userData', JSON.stringify(formData));
-        alert('Регистрация успешна!');
-        window.location.href = "index.html"; 
-    });
+   document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    const password = this.querySelector('input[type="password"]').value;
+    const confirmPassword = this.querySelectorAll('input[type="password"]')[1].value;
+    if (password !== confirmPassword) {
+        alert('Пароли не совпадают!');
+        return;
+    }
+    localStorage.setItem('name', this.querySelector('input[type="text"]').value);
+    localStorage.setItem('email', this.querySelector('input[type="email"]').value);
+    localStorage.setItem('phone', this.querySelector('input[type="tel"]').value);
+    localStorage.setItem('password', password); 
+    alert('Регистрация успешна!');
+    window.location.href = "index.html"; 
+});
+
 </script>
 </body>
 </html>

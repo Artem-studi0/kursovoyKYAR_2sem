@@ -78,18 +78,20 @@
     <a href="enter.html"><h3>Нет аккаунта? Зарегистрируйтесь</h3></a>
 </form>
 <script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        const userData = JSON.parse(localStorage.getItem('userData'));
-        const email = this.querySelector('input[type="text"]').value;
-        const password = this.querySelector('input[type="password"]').value;
-        if (userData && userData.email === email && userData.password === password) {
-            alert('Вход успешен!');
-            window.location.href = "index.html"; 
-        } else {
-            alert('Неправильная почта или пароль');
-        }
-    });
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    const email = this.querySelector('input[type="text"]').value;
+    const password = this.querySelector('input[type="password"]').value;
+    const storedEmail = localStorage.getItem('email');
+    const storedPassword = localStorage.getItem('password');
+    if (storedEmail === email && storedPassword === password) {
+        alert('Вход успешен!');
+        window.location.href = "index.html"; 
+    } else {
+        alert('Неправильная почта или пароль');
+    }
+});
+
 </script>
 </body>
 </html>
