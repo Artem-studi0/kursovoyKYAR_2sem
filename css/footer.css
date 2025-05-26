@@ -97,9 +97,6 @@
   display: flex;
   gap: 16px;
 }
-.footer__list-sn {
-  color: #ff7020;
-}
 .footer__development {
   display: flex;
   flex-direction: column;
